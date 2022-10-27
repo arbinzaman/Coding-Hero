@@ -6,6 +6,7 @@ import Courses from '../Courses/Courses';
 const Home = () => {
     // const allCourse = useLoaderData();
     const [courses , setCourses] = useState([]);
+    
     useEffect(()=>{
         fetch('https://coding-hero-server.vercel.app/courses')
         .then(res => res.json())

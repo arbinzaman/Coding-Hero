@@ -6,6 +6,7 @@ import Login from "../pages/login/Login";
 import Register from "../pages/Register/Register";
 
 import Details from "../pages/Details/Details";
+import CheckOut from "../pages/CheckOut/CheckOut";
 
 export const routes = createBrowserRouter([
     {
@@ -17,29 +18,35 @@ export const routes = createBrowserRouter([
                 element:<Home></Home>,
     
             },
+            {
+                path:'/signIN',
+                element:<Login></Login>
+            
+            },
+            {
+                path:'/courses/:id',
+                loader: async({params})=>
+                fetch(`https://coding-hero-server.vercel.app/courses/${params._id}`),
+                 element:<Details></Details>,
+            },
+            {
+                path:'/register',
+                element:<Register></Register>
+            },
+            {
+                path:'/courses',
+                element:<Courses></Courses>
+            },
+            {
+                path:'/checkOut',
+                element:<CheckOut></CheckOut>
+            },
             
         ]
+
     },
-    {
-        path:'/signIN',
-        element:<Login></Login>
-    
-    },
+  
    
-    {
-        path:'/courses/:id',
-        loader: async({params})=>
-        fetch(`https://coding-hero-server.vercel.app/courses/${params._id}`),
-         element:<Details></Details>,
-    },
-    {
-        path:'/register',
-        element:<Register></Register>
-    },
-    {
-        path:'/courses',
-        element:<Courses></Courses>
-    },
    
 
 ])

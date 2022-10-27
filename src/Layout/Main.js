@@ -3,6 +3,7 @@ import Home from '../pages/Home/Home';
 import Header from '../shared/Header/Header';
 import Footer from '../shared/Footer/Footer'
 import LeftSideNav from '../shared/LeftSideNav/LeftSideNav';
+import { Outlet } from 'react-router-dom';
 
 
 const Main = () => {
@@ -10,16 +11,11 @@ const Main = () => {
         <div>
             <div>
                 <Header></Header>
-                <div  className=' w-auto grid grid-cols-2 gap-4'>
-
-
-                <div>
+                
+                <div  className='grid grid-cols-4'>
                     <LeftSideNav></LeftSideNav>
-
-                </div>
-                <div>
-                    <Home></Home>
-                </div>
+                    <Outlet></Outlet>
+                        
                 </div>
               <Footer></Footer>
             </div>

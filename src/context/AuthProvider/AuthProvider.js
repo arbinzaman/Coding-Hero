@@ -1,5 +1,5 @@
 import React from 'react';
-import {createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut} from  'firebase/auth'
+import {createUserWithEmailAndPassword, getAuth, GithubAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut} from  'firebase/auth'
 import { createContext } from 'react';
 import app from '../../firebase/firebase.init'
 import { useState } from 'react';
@@ -13,16 +13,20 @@ const auth = getAuth (app);
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
 
+    // Goggle Login 
     const ProviderLogin = (Provider) =>{
         return signInWithPopup (auth, Provider);
     }
 
+        // Email Password Login 
     const createUser =(email,password)=> {
         return createUserWithEmailAndPassword(auth, email, password)
     }
     const signIn = (email,password) =>{
         return signInWithEmailAndPassword (auth , email, password);
     }
+
+    // signOut
     const logOut = () => {
         return signOut(auth);
     }
