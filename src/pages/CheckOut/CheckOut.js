@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const CheckOut = () => {
     return (
-        <article className="max-w-2xl px-6 py-24 mx-auto space-y-16 dark:bg-gray-800 dark:text-gray-50">
+        <article className=" my-10 max-w-2xl px-6 py-24 mx-auto space-y-16 dark:bg-gray-800 dark:text-gray-50">
             <div className="w-full mx-auto space-y-4">
                 <h1 className="text-5xl font-bold leading-none">Do you want to buy Our Plans?</h1>
 

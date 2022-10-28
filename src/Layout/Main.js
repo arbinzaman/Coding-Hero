@@ -12,8 +12,8 @@ const Main = () => {
             <div>
                 <Header></Header>
                 
-                <div  className='grid grid-cols-4'>
-                    <LeftSideNav></LeftSideNav>
+                <div  >
+                 
                     <Outlet></Outlet>
                         
                 </div>
