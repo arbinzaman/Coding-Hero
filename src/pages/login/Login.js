@@ -3,14 +3,19 @@ import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import { useContext } from 'react';
 import './login.css'
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 const Login = () => {
 
     // user name And password Login
     const [error,setError]=useState();
     const{signIn} =useContext(AuthContext);
+
+    // Redirect to current path
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+    console.log(from);
 
     const handleUserNamePassword = event =>{
         event.preventDefault();
@@ -27,7 +32,7 @@ const Login = () => {
             console.log(user);
             form.reset();
             setError('')
-            navigate('/');
+            navigate(from,{replace:true});
         })
 
         .catch(error =>{console.error(error)});
@@ -43,7 +48,7 @@ const Login = () => {
         .then (result=>{
             const user = result.user ;
             console.log(user);
-            navigate('/');
+            navigate(from,{replace:true});
         })
         .catch(error=>{console.error(error)});
     }
@@ -55,7 +60,7 @@ const Login = () => {
         .then (result=>{
             const user = result.user ;
             console.log(user);
-            navigate('/');
+            navigate(from,{replace:true});
         })
         .catch(error=>{console.error(error)});
     }

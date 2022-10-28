@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Courses = ({course}) => {
     const { _id, name , image , description} = course;
-    console.log(course);
+    // console.log(course);
     return (
       
              <div className=" mt-5 max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-900 dark:text-gray-100">
