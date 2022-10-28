@@ -7,7 +7,7 @@ console.log(course);
 
         
         <div>
-            <div className=" mt-5 max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-900 dark:text-gray-100">
+            <div className=" max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-900 dark:text-gray-100">
                 <img src={course.image} alt="" className="object-cover  mb-4 h-60 sm:h-96 dark:bg-gray-500" />
                 <h2 className="mb-1 text-xl font-semibold">{course.name}</h2>
                 <p className="text-sm dark:text-gray-400">{course.description}</p>
