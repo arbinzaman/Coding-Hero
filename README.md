@@ -2,7 +2,7 @@
 This is one of the Biggest Learning Online Platform .
 
 ## Live Link 
-Hosted in Firbase -> []() 
+Hosted in Firbase -> https://coding-hero-325aa.web.app/
 
 ## Courses
 You can see our course here -> [Courses]()
