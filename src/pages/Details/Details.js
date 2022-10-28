@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactPDF from '@react-pdf/renderer';
+
 import { Link, useLoaderData } from 'react-router-dom';
 
 const Details = () => {
@@ -16,12 +16,7 @@ const Details = () => {
                         <p className="dark:text-gray-100">{details.description}</p>
                     </div>
                     <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-400 dark:text-gray-900"><Link to="/checkOut">Premium Excess</Link></button>
-                    <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-400 dark:text-gray-900"><Link to="/checkOut">
-                        
-                    
-                    
-                        
-                        </Link></button>
+                
                 </div>
             </div>
         </div>
